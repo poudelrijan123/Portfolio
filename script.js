@@ -219,7 +219,7 @@
       });
       const landedOnThankYou = response.ok && new URL(response.url, window.location.href).pathname.endsWith('/thank-you.html');
       if (landedOnThankYou) {
-        window.location.assign('/thank-you.html');
+        window.location.assign(new URL('thank-you.html', window.location.href).href);
         return;
       }
       throw new Error(`Form endpoint returned ${response.status}`);
