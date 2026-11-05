@@ -1,0 +1,20 @@
+RIJAN POUDEL PORTFOLIO — VERSION 3.3
+
+- Rebuilt the interactive 3D camera as a compact, professional mirrorless /
+  cinema-style camera body inspired by the user's reference photo.
+- Removed the lens and lens hood; the front mount and exposed sensor are shown.
+- Added a modeled rear LCD. Rotate the camera to its rear and click the LCD
+  to open the monitor dialog.
+- Added optional live webcam preview, started only after a deliberate click
+  and browser permission. Closing the dialog stops the camera stream.
+- Replaced the server/API chatbot request with a built-in offline FAQ assistant.
+- Added common answers for greetings, photography, video, camera operation,
+  Rijan's introduction, portfolio navigation, editing and contact.
+- Kept chat in browser memory only with a 15-minute inactivity clear.
+- No external AI server, API key, or AI request is required for chatbot replies.
+
+LIMITATIONS
+The offline assistant is not live ChatGPT and cannot answer arbitrary questions.
+The webcam preview requires HTTPS or localhost and browser permission.
+The 3D model is a custom approximation inspired by the reference, not a
+manufacturer-accurate CAD model.

@@ -1,0 +1,21 @@
+V3.4 CHECK REPORT
+
+PASSED
+- JavaScript syntax check: script.js
+- JavaScript module syntax check: camera3d.js
+- JavaScript syntax check: welcome.js
+- Updated HTML contains one start/stop webcam control pair and no obsolete camera-screen dialog markup.
+- Gallery filter controls and gallery count are present.
+- Security header now permits same-origin camera permission and still disables microphone and geolocation.
+- All project assets are retained in the package.
+
+NOT FULLY VERIFIED IN THIS ENVIRONMENT
+- A headless Chromium browser run was blocked by the execution environment's local-address policy, so a full visual browser test and real camera permission test could not be completed here.
+- Webcam behaviour must be tested on the deployed HTTPS site using a device with a camera.
+- The 3D viewer depends on jsDelivr being reachable. If it is blocked, the fallback image and message are used.
+
+RECOMMENDED FINAL DEVICE TEST
+- Test on a Windows desktop in Chrome/Edge and on an iPhone in Safari.
+- Rotate to the rear, tap the LCD, verify it swings out, then fold it back.
+- Start and stop webcam preview; deny permission once and confirm the error message is clear.
+- Test every gallery filter, lightbox arrows, video modal, navigation, GPT FAQ, page refresh and 404 route.

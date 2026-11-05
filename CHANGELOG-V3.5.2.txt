@@ -1,0 +1,5 @@
+RIJAN POUDEL PORTFOLIO — V3.5.2
+
+- Updated the Netlify inquiry form success redirect to a relative thank-you.html path to avoid root-path issues on hosted deployments.
+- Added explicit Netlify Forms and Gmail notification setup instructions for poudelrijan865@gmail.com.
+- No email recipient is hard-coded into the public HTML; Netlify email notifications must be configured in the site dashboard.

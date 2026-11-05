@@ -1,0 +1,12 @@
+RIJAN POUDEL PORTFOLIO — V3.5.2 TEST REPORT
+
+Static checks performed:
+- Confirmed portfolio.html contains a Netlify Forms POST form named project-inquiry.
+- Confirmed the success destination thank-you.html exists beside portfolio.html.
+- Confirmed the form success action now uses a relative path.
+- JavaScript syntax checks: see command results during packaging.
+- ZIP integrity check: see command results during packaging.
+
+Not verified here:
+- Live Netlify form detection and submission.
+- Gmail notification delivery. The site owner must configure the notification in Netlify and submit a live test.

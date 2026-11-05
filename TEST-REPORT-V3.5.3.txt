@@ -1,0 +1,19 @@
+RIJAN POUDEL PORTFOLIO — V3.5.3 TEST REPORT
+
+Passed local checks:
+- ZIP archive integrity.
+- JavaScript syntax check for script.js and camera3d.js.
+- All local HTML asset references checked for file existence.
+- Duplicate HTML IDs checked.
+- Netlify form name, hidden form-name field, honeypot, required fields and thank-you page checked.
+- Video file inspected: H.264 video + AAC audio, 512x910, 19.9 seconds.
+- Video poster replaced with an actual frame from the supplied video.
+
+Not tested / requires deployment:
+- Live browser rendering across real devices and browsers.
+- 3D camera interaction and webcam permission on the deployed HTTPS site.
+- Netlify form detection, live POST acceptance and Gmail delivery.
+- Gmail notification must be configured in Netlify Forms > Notifications for poudelrijan865@gmail.com.
+
+The form includes a mailto fallback if the online form endpoint returns an error. The visitor must press Send in their email app for that fallback.
+- Attempted headless Chromium browser smoke test, but this execution environment blocked local/file browser navigation (ERR_BLOCKED_BY_ADMINISTRATOR); interactive browser QA therefore remains unverified here.

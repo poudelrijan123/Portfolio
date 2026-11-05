@@ -1,0 +1,32 @@
+RIJAN POUDEL PORTFOLIO — V3.5 PRO
+================================
+
+BASED ON
+- The supplied V3.5 GitHub Pages archive; existing photos, video and project structure retained.
+
+IMPLEMENTED IN THIS PRO BUILD
+- RP monogram SVG favicon.
+- Clicking the RIJAN wordmark returns to the welcome homepage.
+- Interactive monochrome/colour comparison slider using the existing mountain-road photograph. The comparison is clearly labelled as a visual demo, not a RAW-grade claim.
+- FX3-inspired 3D camera model now includes an attached multi-ring lens barrel and front glass rather than an exposed sensor-only mount.
+- Project inquiry form with name, email, project type, budget, deadline, description and optional reference URL.
+- Netlify Forms markup with honeypot field and a dedicated thank-you page.
+- Form constraints, responsive layout, keyboard focus styles and reduced-motion support retained.
+
+DEPLOYMENT NOTES
+- Deploy the contents of this folder to Netlify (not the enclosing folder containing another nested project folder).
+- Netlify Forms must be enabled for the site. After deployment, submit a real test inquiry and verify it appears under Forms in the Netlify dashboard.
+- The form does not upload files; visitors can provide a shareable reference URL.
+- Three.js is loaded from jsDelivr at runtime. The camera has a static fallback if the CDN is unavailable.
+- Webcam preview requires HTTPS and explicit visitor permission; it is not automatically activated.
+
+VERIFICATION STATUS
+- Source-level checks and ZIP integrity are performed at packaging time.
+- This environment cannot certify the user's live Netlify configuration, real device rendering, webcam permissions, or successful form receipt. Complete the deployment checks in README before describing those as verified.
+
+
+V3.5.1 COLOUR LAB POLISH
+- Reworked the comparison control to match the supplied premium before/after reference: rounded cinematic frame, ORIGINAL and FINAL GRADE tags, vertical divider, and circular arrow handle.
+- Added responsive mobile sizing, accessible range input focus styling, and subtle violet accents.
+- Preserved the existing portfolio content, camera, gallery, contact form, and deployment structure.
+- Note: the comparison uses the same source photograph with a CSS colour treatment; it is a visual demo, not a separate professionally graded source file.

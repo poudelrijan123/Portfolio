@@ -1,0 +1,10 @@
+V3.5.4 CHECK REPORT
+
+Static checks performed after edits:
+- JavaScript syntax checks: run separately with node --check.
+- ZIP integrity: run after packaging.
+- Local HTML image references: checked for existence.
+- Duplicate IDs: checked.
+- Price budget options: checked for USD and NPR values.
+
+Not verified in this environment: live Netlify deployment, Gmail notification delivery, webcam permission flow, and real browser/device rendering.

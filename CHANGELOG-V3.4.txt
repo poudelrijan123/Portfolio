@@ -1,0 +1,21 @@
+RIJAN POUDEL PORTFOLIO — V3.4
+
+CAMERA
+- Replaced the blocky camera geometry with a rounded, beveled camera body and more detailed grip, mount ring, exposed sensor, screws, controls, hot shoe, side vents, rear buttons and base.
+- Removed the fixed monitor dialog.
+- Added a rear LCD mounted to a hinge group; tapping the rear display animates it outward and back.
+- Live webcam frames can be mapped directly to the LCD after explicit user permission.
+- Added permission, device-not-found and camera-busy error messages; stop tracks on stop and page exit.
+- Added a graceful static-image fallback if the Three.js CDN cannot load.
+
+PORTFOLIO
+- Added category filters and live photograph count to the selected work gallery.
+- Expanded the offline FAQ answer set.
+- Added favicon and custom 404 page.
+- Updated the camera Permissions-Policy from camera=() to camera=(self); microphone and geolocation remain disabled.
+
+LIMITATIONS
+- Three.js is loaded from jsDelivr, so full 3D requires an internet connection.
+- Webcam preview requires HTTPS or localhost and browser permission.
+- The 3D camera is a custom interpretation based on the supplied front-view photo, not an exact factory model.
+- The offline assistant is a prepared FAQ system, not a generative AI service.

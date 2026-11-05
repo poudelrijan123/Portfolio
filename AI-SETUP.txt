@@ -1,0 +1,32 @@
+RIJAN POUDEL PORTFOLIO — V3.3 OFFLINE ASSISTANT
+
+The GPT-style portfolio helper now runs entirely in the visitor's browser.
+It uses a built-in set of prepared answers for common questions about:
+- greetings and assistant identity
+- Rijan Poudel and this portfolio
+- photography, photos and video
+- camera basics, lens, ISO, shutter speed and aperture
+- composition, video editing and colour grading
+- portfolio sections and contact information
+
+NO AI SERVER OR API KEY IS REQUIRED.
+This is not a live ChatGPT connection and it cannot answer every possible
+question. Unknown questions receive a clear fallback response. To add more
+answers, edit the `faq` list in script.js. Chat messages are kept in memory
+only and the visible chat clears after 15 minutes of inactivity. No chat
+history is written to localStorage or sessionStorage and no chat request is
+sent to an AI provider by this version.
+
+CAMERA LIVE VIEW
+- Rotate the 3D camera with mouse or touch.
+- Turn the model around and click its rear LCD screen to open the monitor.
+- Press START CAMERA and grant browser permission to see a live local preview.
+- The page does not record or upload the webcam footage.
+- Browser camera access requires HTTPS or localhost. It may not work when
+  opening index.html directly as a file. The visitor can stop the preview or
+  close the monitor; closing it stops the camera tracks.
+
+PRIVACY AND SAFETY
+The webcam starts only after the visitor presses START CAMERA and grants
+permission. Audio is not requested. The preview is local to the browser.
+Do not add secret API keys to public HTML or JavaScript files.

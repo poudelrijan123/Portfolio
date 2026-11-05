@@ -1,0 +1,269 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <meta name="theme-color" content="#08090a">
+  <meta name="description" content="Rijan Poudel — photography, video editing and visual storytelling.">
+  <meta property="og:title" content="Rijan Poudel — Visual Stories">
+  <meta property="og:description" content="Capturing moments. Creating stories.">
+  <meta property="og:type" content="website">
+  <link rel="icon" type="image/svg+xml" href="favicon.svg"><meta name="color-scheme" content="dark">
+<title>Rijan Poudel — Portfolio</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+  <script src="script.js" defer></script>
+  <script type="module" src="camera3d.js"></script>
+</head>
+<body>
+  <div class="page-progress" aria-hidden="true"><span id="progressBar"></span></div>
+  <a class="skip-link" href="#main">Skip to content</a>
+
+  <header class="header" id="top">
+    <a class="brand" href="index.html" aria-label="Rijan Poudel homepage">RIJAN<span>.</span></a>
+    <button class="menu-toggle" id="menuToggle" aria-label="Open navigation" aria-expanded="false" aria-controls="mainNav"><span></span><span></span></button>
+    <nav class="nav" id="mainNav" aria-label="Main navigation">
+      <a href="#work">Work</a><a href="#about">About</a><a href="#film">Film</a><a href="#contact">Contact</a>
+    </nav>
+    <a class="header-cta" href="#contact">Let's talk <span>↗</span></a>
+  </header>
+
+  <main id="main">
+    <section class="hero" id="home">
+      <div class="hero-image" aria-hidden="true">
+        <img src="assets/images/portfolio-06-classic-portrait.jpg" alt="Portrait photograph in a green outdoor setting" fetchpriority="high">
+      </div>
+      <div class="hero-overlay"></div>
+      <div class="hero-content wrap">
+        <p class="eyebrow hero-eyebrow"><span class="eyebrow-line"></span> PHOTOGRAPHY · FILM · VISUAL STORIES</p>
+        <h1 class="hero-title"><span class="title-line"><span class="title-inner">RIJAN</span></span><span class="title-line title-outline"><span class="title-inner">POUDEL<span class="title-period">.</span></span></span></h1>
+        <div class="hero-bottom">
+          <p class="hero-description">Finding beauty in the details.<br>Turning moments into stories.</p>
+          <a class="round-link" href="#work" aria-label="Explore selected work"><span>↓</span></a>
+          <p class="hero-index">INDEPENDENT CREATIVE<br><span>BASED IN NEPAL</span></p>
+        </div>
+      </div>
+      <div class="hero-side-note">CAPTURING MOMENTS — CREATING STORIES</div>
+    </section>
+
+    <section class="intro section-pad" id="intro">
+      <div class="wrap intro-grid reveal">
+        <p class="eyebrow">01 / A CREATIVE JOURNEY</p>
+        <div>
+          <h2 class="intro-heading">I don't just take pictures.<br><em>I collect perspectives.</em></h2>
+          <p class="intro-copy">I'm Rijan Poudel — an aspiring photographer and video editor exploring light, movement and the stories hidden in everyday moments. This is where I learn, experiment and share what I see.</p>
+          <a class="text-link" href="#about">A little about me <span>↗</span></a>
+        </div>
+      </div>
+    </section>
+
+    <section class="comparison-section section-pad" id="colour-lab">
+      <div class="wrap">
+        <div class="section-heading reveal"><div><p class="eyebrow">02 / THE COLOUR LAB</p><h2>One frame.<br><em>Two moods.</em></h2></div><p class="section-note">Drag the divider to compare a monochrome reference with a cinematic colour treatment.</p></div>
+        <div class="comparison-frame reveal" id="comparisonFrame" style="--split:50%">
+          <img class="comparison-original" src="assets/images/mountain-road.jpeg" alt="Original mountain road photograph" loading="lazy">
+          <div class="comparison-final"><img src="assets/images/mountain-road.jpeg" alt="Cinematic colour treatment of the same mountain road photograph" loading="lazy"></div>
+          <span class="comparison-label before-label">ORIGINAL</span>
+          <span class="comparison-label after-label">FINAL GRADE</span>
+          <input class="comparison-range" id="comparisonRange" type="range" min="0" max="100" value="50" aria-label="Drag to compare the original and final colour grade">
+          <span class="comparison-divider" aria-hidden="true"><i><b>‹</b><b>›</b></i></span>
+        </div>
+        <p class="comparison-note">Drag the centre handle to reveal the original photograph and its cinematic colour treatment.</p>
+      </div>
+    </section>
+
+    <section class="camera-showcase section-pad" id="camera-showcase">
+      <div class="wrap camera-layout">
+        <div class="camera-copy reveal">
+          <p class="eyebrow">INTERACTIVE OBJECT / 3D STUDY</p>
+          <h2>Behind every frame<br><em>is a perspective.</em></h2>
+          <p>Explore an interactive FX3-inspired cinema camera with an attached lens, rotating controls and a hinged rear LCD. Drag to rotate it, then tap the rear monitor to swing it outward. Live preview is optional and only starts after you grant browser permission.</p>
+          <span class="camera-instruction"><i></i> DRAG TO ROTATE · TAP REAR LCD TO FLIP OUT · RESET VIEW BUTTON</span>
+        </div>
+        <div class="camera-stage reveal" id="cameraStage" aria-label="Interactive 3D camera. Drag to rotate; press Enter to flip the rear LCD; use arrow keys to rotate and Home to reset." tabindex="0">
+          <canvas id="cameraCanvas" aria-label="Interactive 3D FX3-inspired cinema camera with lens"></canvas>
+          <div class="camera-glow" id="cameraGlow"></div>
+          <button class="camera-reset" id="cameraReset" type="button" aria-label="Reset camera view">RESET VIEW</button>
+          <div class="camera-live-controls" aria-label="Live camera controls">
+            <button class="camera-live-button" id="startWebcam" type="button">START LIVE VIEW</button>
+            <button class="camera-live-button secondary" id="stopWebcam" type="button" disabled>STOP</button>
+            <span id="cameraScreenStatus" role="status" aria-live="polite">Tap the rear LCD to flip it out. Live view is optional.</span>
+          </div>
+          <video id="webcamPreview" autoplay muted playsinline hidden></video>
+          <span class="camera-stage-label">DRAG TO ROTATE · TAP REAR LCD TO FLIP OUT · RESET VIEW BUTTON</span>
+        </div>
+      </div>
+    </section>
+
+    <section class="work section-pad" id="work">
+      <div class="wrap">
+        <div class="section-heading reveal">
+          <div><p class="eyebrow">02 / SELECTED FRAMES</p><h2>Visual <em>diary.</em></h2></div>
+          <p class="section-note">A collection of portraits, places<br>and passing moments.</p>
+        </div>
+        <div class="gallery-tools" aria-label="Filter portfolio photographs">
+          <div class="gallery-filters" role="group" aria-label="Photo categories">
+            <button class="gallery-filter is-active" type="button" data-filter="all" aria-pressed="true">All frames</button>
+            <button class="gallery-filter" type="button" data-filter="portrait" aria-pressed="false">Portraits</button>
+            <button class="gallery-filter" type="button" data-filter="wedding" aria-pressed="false">Wedding & details</button>
+            <button class="gallery-filter" type="button" data-filter="travel" aria-pressed="false">Travel</button>
+          </div>
+          <p class="gallery-count" id="galleryCount" aria-live="polite">12 photographs</p>
+        </div>
+        <div class="work-grid" id="photoGrid">
+          <button class="work-card work-card-tall reveal" data-full="assets/images/portfolio-01-bride-portrait.jpg" data-title="A Portrait in Red" data-category="Wedding & Portrait" aria-label="View A Portrait in Red">
+            <span class="card-image"><img src="assets/images/portfolio-01-bride-portrait.jpg" alt="Portrait of a woman in a red traditional outfit" loading="lazy" decoding="async"></span>
+            <span class="card-meta"><span><small>01 / WEDDING & PORTRAIT</small><b>A Portrait in Red</b></span><i>↗</i></span>
+          </button>
+          <button class="work-card reveal" data-full="assets/images/portfolio-02-family-moment.jpg" data-title="A Family Moment" data-category="Wedding & Portrait" aria-label="View A Family Moment">
+            <span class="card-image"><img src="assets/images/portfolio-02-family-moment.jpg" alt="Two women dressed for a celebration" loading="lazy" decoding="async"></span>
+            <span class="card-meta"><span><small>02 / WEDDING & PORTRAIT</small><b>A Family Moment</b></span><i>↗</i></span>
+          </button>
+          <button class="work-card reveal" data-full="assets/images/portfolio-03-ring-exchange.jpg" data-title="The Ring Exchange" data-category="Wedding Details" aria-label="View The Ring Exchange">
+            <span class="card-image"><img src="assets/images/portfolio-03-ring-exchange.jpg" alt="Close-up of a ring exchange during a ceremony" loading="lazy" decoding="async"></span>
+            <span class="card-meta"><span><small>03 / WEDDING DETAILS</small><b>The Ring Exchange</b></span><i>↗</i></span>
+          </button>
+          <button class="work-card reveal" data-full="assets/images/portfolio-04-celebration-portrait.jpg" data-title="A Celebration Smile" data-category="Wedding & Portrait" aria-label="View A Celebration Smile">
+            <span class="card-image"><img src="assets/images/portfolio-04-celebration-portrait.jpg" alt="Close-up portrait at a celebration" loading="lazy" decoding="async"></span>
+            <span class="card-meta"><span><small>04 / WEDDING & PORTRAIT</small><b>A Celebration Smile</b></span><i>↗</i></span>
+          </button>
+          <button class="work-card work-card-wide reveal" data-full="assets/images/portfolio-05-traditional-look.jpg" data-title="Traditional Elegance" data-category="Wedding & Portrait" aria-label="View Traditional Elegance">
+            <span class="card-image"><img src="assets/images/portfolio-05-traditional-look.jpg" alt="Full-length traditional outfit portrait" loading="lazy" decoding="async"></span>
+            <span class="card-meta"><span><small>05 / WEDDING & PORTRAIT</small><b>Traditional Elegance</b></span><i>↗</i></span>
+          </button>
+          <button class="work-card reveal" data-full="assets/images/portfolio-06-classic-portrait.jpg" data-title="Classic Portrait" data-category="Portrait" aria-label="View Classic Portrait">
+            <span class="card-image"><img src="assets/images/portfolio-06-classic-portrait.jpg" alt="Portrait of a man wearing a dark suit" loading="lazy" decoding="async"></span>
+            <span class="card-meta"><span><small>06 / PORTRAIT</small><b>Classic Portrait</b></span><i>↗</i></span>
+          </button>
+          <button class="work-card reveal" data-full="assets/images/portfolio-07-sunglasses-portrait.jpg" data-title="A Different Perspective" data-category="Portrait" aria-label="View A Different Perspective">
+            <span class="card-image"><img src="assets/images/portfolio-07-sunglasses-portrait.jpg" alt="Portrait of a man wearing sunglasses" loading="lazy" decoding="async"></span>
+            <span class="card-meta"><span><small>07 / PORTRAIT</small><b>A Different Perspective</b></span><i>↗</i></span>
+          </button>
+          <button class="work-card reveal" data-full="assets/images/portfolio-08-hair-detail.jpg" data-title="Details from Behind" data-category="Wedding Details" aria-label="View Details from Behind">
+            <span class="card-image"><img src="assets/images/portfolio-08-hair-detail.jpg" alt="Back view showing hairstyle and traditional clothing" loading="lazy" decoding="async"></span>
+            <span class="card-meta"><span><small>08 / WEDDING DETAILS</small><b>Details from Behind</b></span><i>↗</i></span>
+          </button>
+          <button class="work-card reveal" data-full="assets/images/portfolio-09-garden-portrait.jpg" data-title="Garden Portrait" data-category="Wedding & Portrait" aria-label="View Garden Portrait">
+            <span class="card-image"><img src="assets/images/portfolio-09-garden-portrait.jpg" alt="Portrait outdoors in a green garden" loading="lazy" decoding="async"></span>
+            <span class="card-meta"><span><small>09 / WEDDING & PORTRAIT</small><b>Garden Portrait</b></span><i>↗</i></span>
+          </button>
+          <button class="work-card work-card-wide reveal" data-full="assets/images/portfolio-10-side-profile.jpg" data-title="A Quiet Side Profile" data-category="Portrait" aria-label="View A Quiet Side Profile">
+            <span class="card-image"><img src="assets/images/portfolio-10-side-profile.jpg" alt="Side profile portrait outdoors" loading="lazy" decoding="async"></span>
+            <span class="card-meta"><span><small>10 / PORTRAIT</small><b>A Quiet Side Profile</b></span><i>↗</i></span>
+          </button>
+          <button class="work-card work-card-wide reveal" data-full="assets/images/mountain-road.jpeg" data-title="Mountain Road Reflections" data-category="Travel & Landscape" aria-label="View Mountain Road Reflections">
+            <span class="card-image"><img src="assets/images/mountain-road.jpeg" alt="Mountain range seen beside a road" loading="lazy" decoding="async"></span>
+            <span class="card-meta"><span><small>11 / TRAVEL & LANDSCAPE</small><b>Mountain Road Reflections</b></span><i>↗</i></span>
+          </button>
+          <button class="work-card reveal" data-full="assets/images/rijan-portrait.jpeg" data-title="Behind the Camera" data-category="Personal Portrait" aria-label="View Behind the Camera">
+            <span class="card-image"><img src="assets/images/rijan-portrait.jpeg" alt="Portrait selected for the portfolio owner" loading="lazy" decoding="async"></span>
+            <span class="card-meta"><span><small>12 / PERSONAL PORTRAIT</small><b>Behind the Camera</b></span><i>↗</i></span>
+          </button>
+        </div>
+        <p class="sample-note">A selection of photographs from my recent creative practice.</p>
+      </div>
+    </section>
+
+    <section class="statement section-pad">
+      <div class="wrap statement-inner reveal">
+        <p class="eyebrow">THE WAY I SEE IT</p>
+        <h2>Every frame has<br>a <em>feeling.</em></h2>
+        <div class="statement-bottom"><span>LIGHT / MOMENT / MEMORY</span><span>— RIJAN POUDEL</span></div>
+      </div>
+    </section>
+
+    <section class="about section-pad" id="about">
+      <div class="wrap about-grid">
+        <div class="about-photo reveal">
+          <img src="assets/images/rijan-portrait.jpeg" alt="Portrait selected for Rijan Poudel's portfolio" loading="lazy">
+          <span class="photo-index">A WORK IN PROGRESS · 2026</span>
+        </div>
+        <div class="about-copy reveal">
+          <p class="eyebrow">03 / BEHIND THE CAMERA</p>
+          <h2>Still learning.<br><em>Always creating.</em></h2>
+          <p>I'm Rijan, a beginner photographer and video editor with a growing passion for visual storytelling. I enjoy capturing natural moments, exploring new places and finding the right mood through editing and colour.</p>
+          <p>I'm at the beginning of the journey, building my skills one project at a time. Every shoot is a chance to see differently; every edit is a chance to tell a better story.</p>
+          <div class="about-tags"><span>Photography</span><span>Video editing</span><span>Colour grading</span><span>Storytelling</span></div>
+          <a class="text-link" href="mailto:poudelrijan865@gmail.com">Say hello <span>↗</span></a>
+        </div>
+      </div>
+    </section>
+
+    <section class="film section-pad" id="film">
+      <div class="wrap">
+        <div class="section-heading reveal">
+          <div><p class="eyebrow">04 / MOVING IMAGES</p><h2>Motion in <em>mind.</em></h2></div>
+          <p class="section-note">A little movement can<br>say a lot.</p>
+        </div>
+        <div class="film-feature reveal">
+          <button class="film-poster" id="playVideo" type="button" aria-label="Play Rijan's video project">
+            <img src="assets/images/video-edit-thumbnail.jpg" alt="Frame taken from Rijan’s featured video project" loading="lazy">
+            <span class="play-button"><b>▶</b></span><span class="film-duration">PERSONAL VIDEO PROJECT</span>
+          </button>
+          <div class="film-caption"><div><small>VIDEO EDITING / COLOUR / PACING</small><h3>Frames in motion.</h3></div><p>A short vertical motion edit featuring atmospheric lighting, graphic transitions and a product-style reveal.</p></div>
+        </div>
+      </div>
+    </section>
+
+    <section class="services section-pad">
+      <div class="wrap">
+        <div class="section-heading reveal"><div><p class="eyebrow">05 / WHAT I'M EXPLORING</p><h2>Creative <em>focus.</em></h2></div></div>
+        <div class="focus-list">
+          <div class="focus-item reveal"><span>01</span><h3>Photography</h3><p>Portraits, places and natural moments.</p><b>↗</b></div>
+          <div class="focus-item reveal"><span>02</span><h3>Video editing</h3><p>Rhythm, storytelling and clean cuts.</p><b>↗</b></div>
+          <div class="focus-item reveal"><span>03</span><h3>Colour grading</h3><p>Finding the right tone and atmosphere.</p><b>↗</b></div>
+          <div class="focus-item reveal"><span>04</span><h3>Visual storytelling</h3><p>Making small moments feel memorable.</p><b>↗</b></div>
+        </div>
+      </div>
+    </section>
+
+    <section class="contact section-pad" id="contact">
+      <div class="wrap contact-inner reveal">
+        <p class="eyebrow">07 / HAVE A STORY IN MIND?</p>
+        <h2>Let's make<br>something <em>real.</em></h2>
+        <p class="contact-intro">Share a few details about your project. I'll get back to you using the email you provide.</p>
+        <form class="inquiry-form" name="project-inquiry" method="POST" data-netlify="true" netlify-honeypot="bot-field" action="/thank-you.html">
+          <input type="hidden" name="form-name" value="project-inquiry">
+          <p class="form-honeypot" hidden><label>Leave this empty <input name="bot-field"></label></p>
+          <div class="inquiry-grid">
+            <label>Your name *<input name="name" type="text" autocomplete="name" maxlength="100" required></label>
+            <label>Email address *<input name="email" type="email" autocomplete="email" maxlength="254" required></label>
+            <label>Project type *<select name="project-type" required><option value="" disabled selected>Select a project</option><option>Photography</option><option>Video editing</option><option>Colour grading</option><option>Website / digital project</option><option>Other</option></select></label>
+            <label>Estimated budget *<select name="budget" required><option value="" disabled selected>Select a range</option><option>To be discussed</option><option>Under $35 / NPR 5,000</option><option>$35–$100 / NPR 5,000–15,000</option><option>$100–$200 / NPR 15,000–30,000</option><option>$200+ / NPR 30,000+</option></select><small class="budget-note">USD amounts are approximate, using $1 ≈ NPR 151.43. Final quotes may vary.</small></label>
+            <label>Deadline *<input name="deadline" type="date" required></label>
+            <label>Reference link (optional)<input name="reference-link" type="url" maxlength="500" placeholder="https://..."></label>
+            <label class="inquiry-full">Project description *<textarea name="description" rows="5" minlength="15" maxlength="3000" required placeholder="Tell me about your idea, goals and deliverables…"></textarea></label>
+          </div>
+          <button class="inquiry-submit" type="submit">SEND PROJECT INQUIRY <span>↗</span></button>
+          <p class="form-privacy">Your details are used only to respond to this inquiry. Please don't include passwords or sensitive personal information.</p>
+          <p class="form-status" id="inquiryStatus" role="status" aria-live="polite"></p>
+          <p class="form-fallback">If the form does not submit, <a href="mailto:poudelrijan865@gmail.com?subject=Project%20inquiry">email me directly</a>.</p>
+        </form>
+        <a class="contact-email" href="mailto:poudelrijan865@gmail.com">poudelrijan865@gmail.com <span>↗</span></a>
+        <div class="contact-socials"><a href="https://www.instagram.com/poudel_rijan123/" target="_blank" rel="noopener noreferrer">Instagram ↗</a></div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer"><div class="wrap footer-row"><a class="brand" href="index.html">RIJAN<span>.</span></a><p>CAPTURING MOMENTS. CREATING STORIES.</p><p>© <span id="year"></span> RIJAN POUDEL</p></div></footer>
+
+  <dialog class="lightbox" id="lightbox" aria-label="Photo viewer"><button class="modal-close" data-close aria-label="Close">×</button><button class="modal-arrow prev" id="prevPhoto" aria-label="Previous photo">←</button><figure><img id="lightboxImage" alt=""><figcaption id="lightboxCaption"></figcaption></figure><button class="modal-arrow next" id="nextPhoto" aria-label="Next photo">→</button></dialog>
+  <dialog class="video-modal" id="videoModal" aria-label="Video player"><button class="modal-close" data-close aria-label="Close video">×</button><video id="portfolioVideo" controls playsinline preload="metadata"><source src="assets/videos/rijan-video.mp4" type="video/mp4"></video></dialog>
+
+
+  <div class="scroll-orbit" aria-hidden="true"><span id="scrollOrbitDot"></span></div>
+  <aside class="gpt-widget" aria-label="GPT portfolio helper">
+    <button class="gpt-launcher" id="gptLauncher" type="button" aria-expanded="false" aria-controls="gptPanel"><span class="gpt-orb">✦</span><span>GPT</span></button>
+    <section class="gpt-panel" id="gptPanel" hidden aria-label="GPT portfolio helper chat">
+      <header class="gpt-head"><div><b>GPT</b><small>Portfolio assistant</small></div><button type="button" id="gptClose" aria-label="Close GPT">×</button></header>
+      <div class="gpt-messages" id="gptMessages" aria-live="polite"><p class="gpt-bubble">Hello! I’m GPT. Ask about photography, camera settings, video editing, or Rijan’s work.</p></div>
+      <div class="gpt-quick"><button type="button" data-gpt="What is photography?">Photography</button><button type="button" data-gpt="How does a camera work?">Camera basics</button><button type="button" data-gpt="What is video editing?">Video editing</button><button type="button" data-gpt="Who is Rijan Poudel?">About Rijan</button></div>
+      <form id="gptForm" class="gpt-form"><label class="sr-only" for="gptInput">Ask GPT</label><input id="gptInput" maxlength="240" autocomplete="off" placeholder="Ask about this portfolio…"><button type="submit" aria-label="Send message">↑</button></form>
+      <p class="gpt-privacy">Offline portfolio assistant. Replies come from built-in knowledge; no AI server or API key is used. Chat clears after 15 minutes of inactivity. Do not share private information.</p>
+    </section>
+  </aside>
+  <button class="back-top" id="backTop" aria-label="Back to top">↑</button>
+</body>
+</html>

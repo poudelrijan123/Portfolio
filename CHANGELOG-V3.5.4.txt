@@ -1,0 +1,6 @@
+RIJAN POUDEL PORTFOLIO — V3.5.4
+
+- Updated the main portfolio hero background (the page opened by Explore) to the selected outdoor portrait.
+- Refined the hero image position and dark cinematic overlay for readable title text.
+- Updated inquiry budget ranges to show both USD and NPR using an approximate 1 USD = NPR 151.43 reference rate (5 Nov 2026).
+- Added a note that conversions are approximate and final quotes may vary.

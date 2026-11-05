@@ -1,0 +1,14 @@
+V3.5 PRO — BUILD CHECK REPORT
+==============================
+PASS: ZIP source archive extracted successfully.
+PASS: Existing media assets retained in the package.
+PASS: script.js passes Node.js syntax check.
+PASS: camera3d.js passes Node.js syntax check.
+PASS: Inquiry form contains Netlify form name, hidden form-name field, required fields and honeypot.
+PASS: Dedicated thank-you page exists.
+PASS: Before/after slider control and accessible range input are present.
+PASS: RP favicon asset exists.
+NOT TESTED HERE: Actual browser rendering on physical devices, Netlify form detection/receipt, browser webcam permission, external CDN availability, cross-browser visual behavior, or penetration testing. These require deployment and live testing.
+
+
+V3.5.1 update: the Colour Lab slider markup and responsive styles were updated. The JavaScript range input continues to control the split position. Static syntax and archive checks are run during packaging; live browser interaction and deployment form submission remain to be tested after deployment.

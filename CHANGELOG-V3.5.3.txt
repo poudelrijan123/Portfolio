@@ -1,0 +1,10 @@
+RIJAN POUDEL PORTFOLIO — V3.5.3
+
+- Curated the hero image using the strongest outdoor portrait already in the supplied photo set.
+- Replaced the video poster with a real frame extracted from the supplied vertical video.
+- Updated the film caption to accurately describe the existing motion-edit video.
+- Improved the project inquiry form: Netlify Forms POST, visible status feedback, and a mailto fallback to poudelrijan865@gmail.com when the host endpoint is unavailable.
+- Added a direct email fallback below the inquiry form.
+- Kept the supplied photo gallery and featured video assets; no external images or video were invented.
+
+Email delivery note: Netlify must detect the project-inquiry form and have an email notification configured for poudelrijan865@gmail.com. The mailto fallback opens the visitor's email app and requires them to press Send.
